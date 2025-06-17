@@ -1,0 +1,434 @@
+
+.login-container{
+   background-image: url(https://c0.wallpaperflare.com/preview/280/991/637/marketing-desk-graphic-designer-ideas.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-family: 'Open Sans', sans-serif;
+   width: 100vw;
+   height: 100vh;
+   max-width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 2;
+   background-color:rgb(234, 234, 234);
+   position:fixed;
+   top: 0;
+   left: 0;
+   transition: all 0.3s;
+}
+
+.loginsignupBox{
+   border-radius:10px;
+   background-color: rgb(255, 255, 255);
+   width: 25vw;
+   height: 70vh;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+.loginSignUp-toggle{
+   display: flex;
+   height: 3vmax;
+}
+.loginSignUp-toggle > p{
+   color: rgb(45, 45, 45);
+   font-size: 17px;
+   font-weight: 500;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   transition: all 0.5s;
+   cursor: pointer;
+   display: grid;
+   place-items: center;
+   width: 100%;
+}
+
+.loginSignUp-toggle > p:hover{
+   color: tomato;
+}
+.loginsignupBox > div > button{
+   background-color:#05467b;
+   height: 3px;
+   width: 50%;
+   border: none;
+   transition: all 0.5s;
+}
+.loninForm,.signUpForm{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: auto;
+   padding: 2vmax;
+   justify-content: space-evenly;
+   height: 70%;
+   transition: all 0.5s;
+}
+.loninForm > div,.signUpForm > div{
+   display: flex;
+   width: 100%;
+   align-items: center;
+}
+.loninForm h3{
+   width: 80%;
+   color: rgb(53, 53, 53);
+   font-family: 'Open Sans', sans-serif;
+   font-weight:500;
+   font-size: 21px;
+   text-align: center;
+  
+}
+.signUpForm{
+   transform: translateY(-100%) translateX(-100vmax);
+}
+#registerImage > img{
+   width: 3vmax;
+   border-radius: 100%;
+}
+#registerImage > input{
+  display: flex;
+  padding: 0%;
+}
+#registerImage > input::file-selector-button{
+   cursor: pointer;
+   width: 100%;
+   height:5vh;
+   margin: 0;
+   z-index: 2;
+   font: 400 0.8vmax;
+   transition: all 0.5s;
+   padding: 0 1vmax;
+   color: white;
+   background-color: rgb(24, 24, 24);
+}
+#registerImage > input::file-selector-button:hover{
+   background-color: rgb(0, 0, 0);
+}
+.register-error{
+   display: flex;
+   justify-content:space-between;
+   
+   align-items: center;
+   position:fixed;
+   top: 0;
+   width:480px;
+   transition: all 0.3s;
+   padding: 20px;
+   background-color: rgb(208, 223, 249);
+   border-radius: 5px;
+}
+
+.loninForm > div > input,.signUpForm > div  > input {
+   
+   width: 100%;
+   box-sizing: border-box;
+   border: 1px solid rgb(215, 212, 212);
+   border-radius: 5px;
+   padding: 10px 15px;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-size: 15px;
+   font-weight: 500;
+   outline: none;
+}
+.loninForm > div > input:focus,.signUpForm > div  > input:focus {
+   background-color: #F7FEFF;
+   border-color: #007185;
+   box-shadow: 0 0 0 3px #C8F3FA, 0 1px 2px rgba(15,17,17,.15) inset;
+   outline: none;
+}
+.loninForm  > a{
+ color: rgb(40, 40, 40);
+ text-decoration: none;
+ align-self: flex-end;
+ transition: all 0.5s;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ font-size: 15px;
+ font-weight: 500;
+}
+.loninForm >a:hover{
+  color: black;
+}
+.loginBtn,.signUpBtn{
+   border: none;
+   /* background-color: tomato; */
+   background-color:#05467b;
+   color: white;
+   width: 50%;
+   padding: 0.8vmax;
+   cursor: pointer;
+   transition: all 0.5s;
+   border-radius: 20px;
+   font-size: 15px;
+   font-weight: 500;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   outline:none;
+   box-shadow: 0px 2px 5px rgba(0,0,0,0.219);
+}
+.loginBtn:hover,.signUpBtn:hover{
+   background-color:#072137;
+   
+}
+
+
+
+
+
+.shiftToNeutral{
+   transform: translateX(0%);
+}
+.shiftToRight{
+   transform: translateX(100%);
+   
+}
+.shiftToNeutralForm{
+   transform: translateX(0%) translateY(-100%);
+}
+.shiftToLeft{
+   transform: translateX(-100%);
+  
+}
+
+/* ... your existing CSS remains unchanged ... */
+
+/* Add this at the bottom of your CSS */
+@media screen and (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    padding: 20px;
+    background-size: cover;
+  }
+
+  .loginsignupBox {
+    width: 90vw;
+    height: auto;
+    padding: 20px;
+  }
+
+  .loninForm, .signUpForm {
+    width: 100%;
+    padding: 20px 10px;
+    height: auto;
+  }
+
+  .loninForm > h3 {
+    font-size: 18px;
+  }
+
+  .loninForm > div > input, .signUpForm > div > input {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .loninForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 15px; /* 👈 Add this */
+}
+
+
+  .loginBtn, .signUpBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .loginSignUp-toggle > p {
+    font-size: 16px;
+  }
+
+  .register-error {
+    width: 90%;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  #registerImage > input::file-selector-button {
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .loninForm > a {
+    font-size: 13px;
+    text-align: right;
+    width: 100%;
+  }
+}
+.googleSignUpBtn {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.googleSignUpBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+.googleSignUpBtn:hover {
+  background-color: #f7f7f7;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+}
+
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #05467b;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* error box */
+.custom-alert {
+  margin-top: 1rem;
+  padding: 10px 15px;
+  background-color: #ffe0e0;
+  color: #b30000;
+  border: 1px solid #ffcccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* css for register page */
+
+ body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      width: 600px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-align: center;
+      color: #05467b;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      border-color: #05467b;
+      outline: none;
+    }
+
+    .submit-btn,
+    .google-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn {
+      background-color: #05467b;
+      color: white;
+    }
+
+    .submit-btn:hover {
+      background-color: #032f57;
+    }
+
+    .google-btn {
+      background-color: white;
+      border: 1px solid #ccc;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .google-btn img {
+      width: 20px;
+      margin-right: 8px;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
