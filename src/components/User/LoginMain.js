@@ -1,6 +1,6 @@
 import React ,{useRef ,useState ,useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import "./loginSignup.css";
+import styles from "./loginSignup.module.css";
 
 import { useNavigate,useLocation } from 'react-router-dom'; 
 import { useDispatch,useSelector } from 'react-redux'
@@ -33,38 +33,38 @@ const LoginMain = () => {
   return (
       <>
         
-        {loading?( <div className="loader-container">
-          <div className="loader"></div>
+        {loading?( <div className={styles.loadercontainer}>
+          <div className={styles.loader}></div>
         </div>):
         (
 
 
-           <div className='login-container'>
-          <div className='loginsignupBox'>
+           <div className={styles.logincontainer}>
+          <div className={styles.loginsignupBox}>
               
               
                
                
                 
-               <form className='loninForm' onSubmit={loginSubmit}>
+               <form className={styles.loninForm} onSubmit={loginSubmit}>
                       <h3>Hey ,Enter your detail to get sign in to your account </h3>
-                      <div className='loginEmail'>
+                      <div className={styles.loginEmail}>
                         
                         <input type='email' placeholder='Enter Email' required  value={loginEmail} onChange={(e)=> setLoginEmail(e.target.value) } />
                       </div>
-                      <div className='loginPassword'>
+                      <div className={styles.loginPassword}>
                         <input type='password' placeholder='password'  required value={loginPassword} onChange={(e)=> setLoginPassword(e.target.value) } />
                       </div>
                       
                       <Link to='/password/forgot'>Forget Password?</Link>
                       
-                      <input  type='submit' value='Login' className='loginBtn'/>
-                      <button type="button" className="googleSignUpBtn">
+                      <input  type='submit' value='Login' className={styles.loginBtn}/>
+                      <button type="button" className={styles.googleSignUpBtn}>
   <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Icon" />
   Sign Up with Google
 </button>
 {error && (
-  <div className="custom-alert">
+  <div className={styles.customalert}>
     <p>{error}</p> 
   </div>
 )}

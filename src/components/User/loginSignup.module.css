@@ -1,5 +1,5 @@
 
-.login-container{
+.logincontainer{
    background-image: url(https://c0.wallpaperflare.com/preview/280/991/637/marketing-desk-graphic-designer-ideas.jpg);
    background-repeat: no-repeat;
    background-size: cover;
@@ -303,7 +303,7 @@
 }
 
 /* error box */
-.custom-alert {
+.customalert {
   margin-top: 1rem;
   padding: 10px 15px;
   background-color: #ffe0e0;
@@ -332,19 +332,16 @@
 
 /* css for register page */
 
- body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f4f8;
-      margin: 0;
-      padding: 0;
+ 
+    .registerContainer{
+      margin: 10px 0px;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
     }
-
-    .form-container {
-      background: white;
+    .formcontainer {
+      background: rgb(231, 231, 231);
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -353,39 +350,39 @@
       box-sizing: border-box;
     }
 
-    h2 {
+    .registerHeading {
       text-align: center;
       color: #05467b;
       margin-bottom: 20px;
-    }
+    } 
 
-    .form-group {
+    .formgroup {
       margin-bottom: 15px;
     }
 
-    label {
+    .registerlabel {
       display: block;
       font-size: 14px;
       margin-bottom: 5px;
       color: #333;
-    }
+    } 
 
-    input {
+    .registerInput {
       width: 100%;
       padding: 10px 12px;
       font-size: 14px;
       border: 1px solid #ccc;
       border-radius: 6px;
       box-sizing: border-box;
-    }
-
-    input:focus {
+    } 
+ 
+   .form-container input:focus {
       border-color: #05467b;
       outline: none;
-    }
+    } 
 
-    .submit-btn,
-    .google-btn {
+    .submitbtn,
+    .googlebtn {
       width: 100%;
       padding: 12px;
       font-size: 15px;
@@ -395,16 +392,16 @@
       margin-top: 10px;
     }
 
-    .submit-btn {
-      background-color: #05467b;
+    .submitbtn {
+      background-color: #0f81e5;
       color: white;
     }
 
-    .submit-btn:hover {
+    .submitbtn:hover {
       background-color: #032f57;
     }
 
-    .google-btn {
+    .googlebtn {
       background-color: white;
       border: 1px solid #ccc;
       color: #333;
@@ -413,7 +410,7 @@
       justify-content: center;
     }
 
-    .google-btn img {
+    .googlebtn img {
       width: 20px;
       margin-right: 8px;
     }
