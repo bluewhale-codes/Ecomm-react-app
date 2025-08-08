@@ -1,12 +1,12 @@
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'; 
-import styles from './Navbar.module.css';
+
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
 import { Link } from 'react-router-dom';
-
-
-const Header = () => {
+import Product from '../Product/Product';
+import { Banner } from './Banner';
+const Header = ({ account,connectWallet }) => {
   return (
     <>
          
@@ -39,14 +39,16 @@ const Header = () => {
 
       <div className="flex items-center space-x-4 font-semibold">
         <a href="#" className="text-gray-800 hover:text-blue-600 transition">Cart 🛒</a>
-        <a href="#" className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm hover:bg-blue-700 transition">Login</a>
-        <a href="#" className="px-3 py-1.5 rounded border border-blue-600 text-blue-600 text-sm hover:bg-blue-50 transition">Sign Up</a>
+       <button onClick={connectWallet} className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-lg hover:from-green-500 hover:to-teal-600 transition duration-300">
+          {account ? `Connected: ${account.slice(0,6)}...${account.slice(-4)}` : "Connect Wallet"}
+        </button>
+
+        
       </div>
     </div>
   </div>
 </nav>
-
-
+  
     </>
   )
 
